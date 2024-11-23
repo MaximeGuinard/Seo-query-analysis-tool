@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analyseur SEO Pro</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#8a77eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                <h1>Analyseur SEO Pro</h1>
+            </div>
+            <p>Analysez l'intention utilisateur et découvrez les opportunités SEO</p>
+        </header>
+
+        <form id="searchForm" class="search-form">
+            <div class="search-input">
+                <input type="text" id="query" placeholder="Entrez votre requête ou mot-clé..." required>
+                <button type="submit">Analyser</button>
+            </div>
+        </form>
+
+        <div id="loader" class="loader hidden">
+            <div class="spinner"></div>
+            <span>Analyse en cours...</span>
+        </div>
+
+        <div id="results" class="results hidden">
+            <nav class="tabs">
+                <button class="tab active" data-tab="intent">Analyse d'intention</button>
+                <button class="tab" data-tab="keywords">Suggestions de mots-clés</button>
+                <button class="tab" data-tab="recommendations">Mots-clés à intégrer</button>
+            </nav>
+
+            <div class="tab-content">
+                <div id="intentContent" class="tab-pane active"></div>
+                <div id="keywordsContent" class="tab-pane"></div>
+                <div id="recommendationsContent" class="tab-pane"></div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="/main.js"></script>
+</body>
+</html>
